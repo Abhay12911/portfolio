@@ -1,0 +1,53 @@
+import React from 'react';
+import { Link as ScrollLink, Element } from 'react-scroll';
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { MdOutlineMail } from "react-icons/md";
+
+const Navbar = () => {
+   return (
+      <nav>
+      <div className="flex justify-center mt-4">
+         <ul className="text-white flex text-2xl font-semibold">
+            <li className="mx-4 hover:text-pink-400">
+               <ScrollLink to="home" smooth={true} duration={500}>Home</ScrollLink>
+            </li>
+            <li className="mx-4 hover:text-pink-400">
+               <ScrollLink to="about" smooth={true} duration={500}>About</ScrollLink>
+            </li>
+            <li className="mx-4 hover:text-pink-400">
+               <ScrollLink to="projects" smooth={true} duration={500}>Projects</ScrollLink>
+            </li>
+            <li className="mx-4 hover:text-pink-400">
+               <ScrollLink to="contact" smooth={true} duration={500}>Contact Me</ScrollLink>
+            </li>
+         </ul>
+
+         <div className='ml-80 mt-1'>
+           <ul className='flex h-4 gap-4'>
+            <li className=' hover:text-pink-400'><a href='https://github.com/Abhay12911'><FaGithub className='text-3xl' /></a></li>
+            <li className=' hover:text-pink-400'><a href='https://www.linkedin.com/in/abhay-mishra-1976092a3/'><FaLinkedin className='text-3xl'/></a></li>
+            <li className=' hover:text-pink-400'><a href=''><MdOutlineMail className='text-3xl' /></a>
+            </li>
+           </ul>
+         </div>
+         
+      </div>
+      <div onClick={() => SetNav(!nav)} className='md:hidden pr-6 z-10 cursor-pointer text-gray-500' >
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+      </div>
+
+      {/* To only display this menu when "nav" is true on smaller screens */}
+      <ul className={`flex flex-col justify-center items-center md:hidden text-gray-400 absolute ${nav ? "h-screen" : "h-0"} w-full top-0 left-0 ${nav ? "translate-y-0" : "-translate-y-40"} bg-gradient-to-b from-black to-gray-800 z-[-1] text-3xl duration-300 ease-in-out`}>
+        {links.map(({ id, link }) => (
+          <li key={id} className='hover:text-purple-500 duration-200 hover:scale-105 cursor-pointer mx-4 capitalize py-4'>
+            <Link onClick={()=>SetNav(!nav)} to={link} smooth duration={500}>{link}</Link>
+            </li>
+        ))}
+      </ul>
+
+      </nav>
+   );
+};
+
+export default Navbar;
