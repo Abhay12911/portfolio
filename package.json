@@ -1,12 +1,10 @@
 {
   "devDependencies": {
-    "gh-pages": "^6.2.0",
-    "homepage": "https://Abhay12911.github.io/portfolio"
-  },
+    "gh-pages": "^6.2.0"
+    
+  }
 
-  "scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+  
 }
 
-}
+
