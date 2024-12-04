@@ -36,7 +36,7 @@ const ProjectsPage = () => {
           <Card
             imageLink={weather}
             projectName={"Weather App"}
-            desc={"Created weather app using HTML,CSS and JS which gives the real time weahter of the place."}
+            desc={"Created weather app using HTML,CSS and JS which gives the real time weather of the place."}
             codeUrl={"https://github.com/Abhay12911/weather-app"}
           />
           <Card

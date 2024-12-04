@@ -22,7 +22,7 @@ const ContactPage = () => {
               </div>
             </div>
             <div className='mt-4'>
-              <label className='text-2xl font-semibold'>Name</label>
+              <label className='text-2xl font-semibold'>Description</label>
               <div className='mt-4 mr-4'>
                 <textarea name="message" rows="10" placeholder='What do you want to say?' className='w-full sm:w-1/2  rounded-lg bg-black text-white text-xl pl-5 pt-2 focus:outline-none shadow-lg shadow-red-400' required />
               </div>
