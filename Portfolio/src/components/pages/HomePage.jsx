@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../image/img1.jpg'
+// import img1 from '../../image/img1.jpg'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import { Link } from 'react-scroll'
 import profile from '../../image/profile.png'
@@ -33,7 +33,7 @@ const HomePage = () => {
             <span><Cursor/></span>
             </h2>
           <p className='pb-4 text-gray-400'>
-            I love to build stuff using technologies like React, Tailwind, NodeJS, Express, Mongo etc. I also like learning and quickly adapting to new technologies, so I'm always learning something new. I also solve coding problems in C++ langauge.</p>
+          I'm a passionate full-stack developer who loves building scalable and user-friendly web applications. I enjoy learning and adapting to new technologies, constantly expanding my skills to stay current in the fast-evolving tech landscape. I also strengthen my problem-solving abilities by practicing data structures and algorithms in C++.</p>
 
           <div className="">
             <Link to='contact' smooth duration={500} >

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/common/Navbar';
 import HomePage from './components/pages/HomePage';
-import AboutPage from './components/pages/AboutPage';
+// import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
 import ProjectsPage from './components/pages/ProjectsPage';
 import TechnologiesPage from './components/pages/TechnologiesPage';
@@ -18,9 +18,9 @@ function App() {
             <HomePage />
          </div>
         
-         <div id="about" className="section">
+         {/* <div id="about" className="section">
             <AboutPage />
-         </div>
+         </div> */}
          <div id="projects" className="section">
             <ProjectsPage />
          </div>

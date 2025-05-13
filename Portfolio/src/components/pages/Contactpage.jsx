@@ -13,18 +13,18 @@ const ContactPage = () => {
 
             <label className='text-2xl font-semibold'>Name</label>
             <div className='mt-4 mr-4 sm:mr-0'>
-              <input type="text" name="name" placeholder='Enter your name' className=' w-full sm:w-1/2 h-10 rounded-lg bg-black text-white text-xl pl-5 focus:outline-none shadow-lg shadow-red-400' required></input>
+              <input type="text" name="name" placeholder='Enter your name' className=' w-full sm:w-1/2 h-10 rounded-lg bg-black text-white text-xl pl-5 focus:outline-none shadow-md shadow-sky-400' required></input>
             </div>
             <div className='mt-4'>
               <label className='text-2xl font-semibold'>Email</label>
               <div className='mt-4 mr-4'>
-                <input type="email" name="name" placeholder='Enter your email' className=' w-full sm:w-1/2 h-10 rounded-lg bg-black text-white text-xl pl-5 focus:outline-none shadow-lg shadow-red-400' required></input>
+                <input type="email" name="name" placeholder='Enter your email' className=' w-full sm:w-1/2 h-10 rounded-lg bg-black text-white text-xl pl-5 focus:outline-none shadow-md shadow-sky-400' required></input>
               </div>
             </div>
             <div className='mt-4'>
-              <label className='text-2xl font-semibold'>Name</label>
+              <label className='text-2xl font-semibold'>Description</label>
               <div className='mt-4 mr-4'>
-                <textarea name="message" rows="10" placeholder='What do you want to say?' className='w-full sm:w-1/2  rounded-lg bg-black text-white text-xl pl-5 pt-2 focus:outline-none shadow-lg shadow-red-400' required />
+                <textarea name="message" rows="10" placeholder='What do you want to say?' className='w-full sm:w-1/2  rounded-lg bg-black text-white text-xl pl-5 pt-2 focus:outline-none shadow-md shadow-sky-400 ' required />
               </div>
             </div>
             <button className='bg-gradient-to-tr from-purple-500 to-sky-500 py-4 px-6 w-36 text-white mt-4 rounded-md hover:scale-105 duration-300'>Let's Talk</button>
