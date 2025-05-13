@@ -7,6 +7,10 @@ function Navbar() {
   // To toggle hamburger and cross, and various things that change accordingly
   const [nav, SetNav] = useState(false);
 
+
+
+
+  
   // To display about, work, resume and contact
   let links = [
     {
