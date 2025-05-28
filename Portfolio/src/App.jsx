@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './components/common/Navbar';
+import Navbar from './components/common/navbar';
 import HomePage from './components/pages/HomePage';
 // import AboutPage from './components/pages/AboutPage';
-import ContactPage from './components/pages/ContactPage';
+import ContactPage from './components/pages/Contactpage';
 import ProjectsPage from './components/pages/ProjectsPage';
 import TechnologiesPage from './components/pages/TechnologiesPage';
 
@@ -13,8 +13,9 @@ import './App.css';
 function App() {
    return (
       <div >
-         <Navbar />
+          <Navbar />
          <div id="home" className="section">
+           
             <HomePage />
          </div>
         

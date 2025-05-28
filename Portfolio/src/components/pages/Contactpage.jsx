@@ -1,39 +1,113 @@
-import React from 'react'
+
+
+import React, { useState } from 'react';
+import { Send, Mail, User, MessageSquare } from 'lucide-react';
 
 const ContactPage = () => {
+  const [formStatus, setFormStatus] = useState('idle');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus('sending');
+    
+    try {
+      const form = e.currentTarget;
+      await fetch('https://getform.io/f/bvrrmwzb', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      setFormStatus('sent');
+      form.reset();
+      setTimeout(() => setFormStatus('idle'), 3000);
+    } catch (error) {
+      setFormStatus('idle');
+    }
+  };
+
   return (
-    <div className='bg-gradient-to-b from-black to-gray-800 '>
-      <div className='max-w-screen-lg mx-auto mt-64 pb-8 ml-6 sm:ml-56'>
+    <div name="contact" className="relative min-h-screen bg-gradient-to-b from-black to-gray-800 text-white py-20">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl"></div>
+      </div>
 
-        <h1 className='text-4xl border-b-4 inline border-sky-500 font-bold'>Contact</h1>
-        <p className='text-2xl mt-10'>Lets's get in touch</p>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold inline-block bg-gradient-to-r from-purple-400 to-sky-400 bg-clip-text text-transparent pb-2 mb-4">
+            Get In Touch
+          </h1>
+          <p className="text-gray-400 text-lg">
+            Have a question or want to work together? Let's make it happen!
+          </p>
+        </div>
 
-        <div className='flex flex-col'>
-          <form action="https://getform.io/f/bvrrmwzb" method="POST" className='pt-20'>
+        <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl shadow-purple-500/5">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label className="flex items-center gap-2 text-gray-300 text-sm font-medium mb-2">
+                <User className="w-4 h-4" />
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300"
+                placeholder="John Doe"
+              />
+            </div>
 
-            <label className='text-2xl font-semibold'>Name</label>
-            <div className='mt-4 mr-4 sm:mr-0'>
-              <input type="text" name="name" placeholder='Enter your name' className=' w-full sm:w-1/2 h-10 rounded-lg bg-black text-white text-xl pl-5 focus:outline-none shadow-md shadow-sky-400' required></input>
+            <div>
+              <label className="flex items-center gap-2 text-gray-300 text-sm font-medium mb-2">
+                <Mail className="w-4 h-4" />
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300"
+                placeholder="john@example.com"
+              />
             </div>
-            <div className='mt-4'>
-              <label className='text-2xl font-semibold'>Email</label>
-              <div className='mt-4 mr-4'>
-                <input type="email" name="name" placeholder='Enter your email' className=' w-full sm:w-1/2 h-10 rounded-lg bg-black text-white text-xl pl-5 focus:outline-none shadow-md shadow-sky-400' required></input>
-              </div>
+
+            <div>
+              <label className="flex items-center gap-2 text-gray-300 text-sm font-medium mb-2">
+                <MessageSquare className="w-4 h-4" />
+                Your Message
+              </label>
+              <textarea
+                name="message"
+                required
+                rows={6}
+                className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300 resize-none"
+                placeholder="Tell me about your project..."
+              />
             </div>
-            <div className='mt-4'>
-              <label className='text-2xl font-semibold'>Description</label>
-              <div className='mt-4 mr-4'>
-                <textarea name="message" rows="10" placeholder='What do you want to say?' className='w-full sm:w-1/2  rounded-lg bg-black text-white text-xl pl-5 pt-2 focus:outline-none shadow-md shadow-sky-400 ' required />
-              </div>
-            </div>
-            <button className='bg-gradient-to-tr from-purple-500 to-sky-500 py-4 px-6 w-36 text-white mt-4 rounded-md hover:scale-105 duration-300'>Let's Talk</button>
+
+            <button
+              type="submit"
+              disabled={formStatus !== 'idle'}
+              className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium transition-all duration-300
+                ${formStatus === 'idle' 
+                  ? 'bg-gradient-to-r from-purple-500 to-sky-500 hover:from-purple-600 hover:to-sky-600 hover:shadow-lg hover:shadow-purple-500/20' 
+                  : 'bg-gray-700 cursor-not-allowed'}`}
+            >
+              {formStatus === 'idle' && (
+                <>
+                  Send Message
+                  <Send className="w-4 h-4" />
+                </>
+              )}
+              {formStatus === 'sending' && 'Sending...'}
+              {formStatus === 'sent' && 'Message Sent!'}
+            </button>
           </form>
-
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

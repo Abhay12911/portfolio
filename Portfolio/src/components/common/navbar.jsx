@@ -17,10 +17,7 @@ function Navbar() {
       id: 1,
       link: "home"
     },
-    {
-      id: 2,
-      link: "about"
-    },
+   
     {
       id: 3,
       link: "projects"
@@ -36,12 +33,10 @@ function Navbar() {
   ]
 
   return (
-    <nav className='flex text-white h-20 items-center justify-between bg-black bg-opacity-90 top-0 sticky z-10'>
-
-      <a href='/' className='hover:text-sky-500 cursor-pointer text-5xl font-signature font-bold ms-6 hover:scale-105 duration-300'>Abhay</a>
+    <nav className='flex text-black h-16  items-center md:justify-center bg-gradient-to-b from-gray-800  to-gray-800 bg-opacity-90 top-0  z-10'>
 
       {/* Menu in greater than medium screens */}
-      <ul className='hidden text-gray-400 md:flex items-center mx-6'>
+      <ul className='hidden text-gray-400 md:flex items-center mx-6 text-2xl font-semibold'>
 
         {links.map(({ id, link }) => (
           <li key={id} className='hover:text-purple-500 duration-200 hover:scale-105 cursor-pointer mx-4 capitalize'>
@@ -52,7 +47,7 @@ function Navbar() {
       </ul>
 
       {/* To toggle bw the hamburger and cross icons */}
-      <div onClick={() => SetNav(!nav)} className='md:hidden pr-6 z-10 cursor-pointer text-gray-500' >
+      <div onClick={() => SetNav(!nav)} className='md:hidden pr-6 z-10 cursor-pointer text-gray-500 ' >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
@@ -70,3 +65,6 @@ function Navbar() {
 }
 
 export default Navbar
+
+
+
