@@ -19,7 +19,7 @@ const ProjectsPage = () => {
             Work/Projects
           </h1>
           <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-            Check out some of the projects that I've built using technologies like React, Tailwind, and the MERN stack.
+            Check out some of the projects that I've built.
           </p>
         </div>
 
