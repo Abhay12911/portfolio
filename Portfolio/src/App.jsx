@@ -1,6 +1,6 @@
 import React from 'react';
 import HomePage from './components/pages/HomePage';
-import Navbar from './components/common/Navbar.jsx';
+import Navbar from './components/common/Navbar';
 // import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/Contactpage';
 import ProjectsPage from './components/pages/ProjectsPage';
