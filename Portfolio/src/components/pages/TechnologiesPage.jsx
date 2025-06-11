@@ -1,6 +1,6 @@
 
 import React from 'react'
-import TechBadge from '../common/TechBadge';
+import TechBadge from '../Common/TechBadge';
 import html from '../../image/html.png'
 import css from '../../image/css.png'
 import express from '../../image/express-js.png'

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Card from '../common/Card';
+import Card from '../Common/Card';
 import travel from '../../image/travel.jpg';
 import twitter from '../../image/twitter.jpg';
 import job from '../../image/job.jpg';
