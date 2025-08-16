@@ -9,68 +9,75 @@ import payment from '../../image/payment.jpg';
 
 const ProjectsPage = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-black to-gray-800">
+    <div className="relative min-h-screen bg-gradient-to-b from-black to-gray-900">
       {/* Background with subtle pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 inline-block">
-            Work/Projects
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16">
+        <div className="text-center mb-20">
+          <h1 className="text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600 inline-block mb-6">
+            Featured Projects
           </h1>
-          <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-            Check out some of the projects that I've built.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Explore my carefully crafted projects that showcase technical expertise, innovation, and attention to detail.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <Card
-         imageLink={payment}
-          projectName="Paymemt App"
-          desc="A full-stack payment application enabling seamless peer-to-peer (P2P) transfers, On-ramp transactions, bank webhook server and robust backend"
-          codeUrl="https://github.com/Abhay12911/Paytm-project"
-          tags={["Nextjs", "Postgress", "Express", "Tailwind", "Node.js","CI"]}
-        />
-        <Card
-            imageLink={job}
-            projectName="AI powered Job Recommendation System"
-            desc="Built an AI-Powered Job recommendation System - a smart tool that helps job seekers find relevant opportunities based on their resume content!"
-            codeUrl="https://github.com/Abhay12911/ai-job-recommendation"
-            tags={["Nextjs", "MongoDB", "Express", "Node.js", "Tailwind", "OpenAI"]}
+        <div className="space-y-12">
+          <Card
+            imageLink={payment}
+            projectName="Full-Stack Payment Application"
+            desc="A comprehensive payment platform featuring seamless peer-to-peer transfers, secure on-ramp transactions, sophisticated bank webhook integration, and a robust backend architecture. Built with modern technologies and industry best practices for scalability and security."
+            codeUrl="https://github.com/Abhay12911/Paytm-project"
+            liveUrl="#"
+            tags={["Next.js", "PostgreSQL", "Express.js", "Tailwind CSS", "Node.js", "CI/CD"]}
+            featured={true}
           />
+          
+          <Card
+            imageLink={job}
+            projectName="AI-Powered Job Recommendation System"
+            desc="Intelligent job matching platform that leverages advanced AI algorithms to analyze resume content and provide personalized job recommendations. Features natural language processing, machine learning models, and intuitive user interface for optimal job-seeking experience."
+            codeUrl="https://github.com/Abhay12911/ai-job-recommendation"
+            liveUrl="#"
+            tags={["Next.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "OpenAI API"]}
+          />
+          
           <Card
             imageLink={twitter}
-            projectName="Twitter Clone"
-            desc="Created full stack twitter clone using the MERN stack also used react-query for state management and tailwind css, daisyUI for interactive design."
+            projectName="Twitter Clone - Social Platform"
+            desc="Feature-rich social media platform replicating Twitter's core functionality with real-time updates, user authentication, tweet interactions, and responsive design. Implemented using modern React patterns and state management solutions."
             codeUrl="https://github.com/Abhay12911/Twitter-clone"
-            tags={["React", "MongoDB", "Express", "Node.js"]}
+            liveUrl="#"
+            tags={["React.js", "MongoDB", "Express.js", "Node.js", "React Query"]}
           />
+          
           <Card
             imageLink={travel}
-            projectName="Travelblog Website"
-            desc="Created travel blog website using MERN in which can post their blogs and images. Applied modern styling using tailwind"
+            projectName="Travel Blog Platform"
+            desc="Dynamic content management system for travel enthusiasts to share their experiences through rich blog posts and stunning imagery. Features user authentication, content creation tools, and modern responsive design."
             codeUrl="https://github.com/Abhay12911/Blog-Space"
-            tags={["React", "MongoDB", "Express", "Node.js"]}
+            liveUrl="#"
+            tags={["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS"]}
           />
           
-          
-         
-          <Card
+          {/* <Card
             imageLink={youtube}
-            projectName="Youtube Clone"
-            desc="Created a Youtube clone using React.js and Tailwind CSS. The app allows users to search for videos and view video details."
+            projectName="YouTube Clone Interface"
+            desc="Pixel-perfect recreation of YouTube's interface with video search functionality, detailed video pages, and responsive design. Demonstrates mastery of modern frontend development and API integration."
             codeUrl="https://github.com/Abhay12911/Youtube-Clone"
-            tags={["React", "Tailwind CSS"]}
+            liveUrl="#"
+            tags={["React.js", "Tailwind CSS", "YouTube API"]}
           />
 
-<Card
+          <Card
             imageLink={travel}
-            projectName="Weather App"
-            desc="Created weather app using HTML, CSS and JS which gives the real time weather of the place."
+            projectName="Real-Time Weather Application"
+            desc="Clean and intuitive weather application providing accurate real-time weather information with location-based forecasting, interactive UI elements, and responsive design for all devices."
             codeUrl="https://github.com/Abhay12911/weather-app"
-            tags={["HTML", "CSS", "JavaScript"]}
-          />
-        
+            liveUrl="#"
+            tags={["HTML5", "CSS3", "JavaScript", "Weather API"]}
+          /> */}
         </div>
       </div>
     </div>
