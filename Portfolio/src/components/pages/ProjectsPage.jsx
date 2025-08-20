@@ -25,14 +25,15 @@ const ProjectsPage = () => {
 
         <div className="space-y-12">
           <Card
-            imageLink={payment}
-            projectName="Full-Stack Payment Application"
-            desc="A comprehensive payment platform featuring seamless peer-to-peer transfers, secure on-ramp transactions, sophisticated bank webhook integration, and a robust backend architecture. Built with modern technologies and industry best practices for scalability and security."
-            codeUrl="https://github.com/Abhay12911/Paytm-project"
-            liveUrl="#"
-            tags={["Next.js", "PostgreSQL", "Express.js", "Tailwind CSS", "Node.js", "CI/CD"]}
-            featured={true}
-          />
+  imageLink={payment}
+  projectName="Full-Stack Payment Application"
+  desc="Engineered a production-grade payment system with a mock banking server, secure on-ramp transactions, and webhook-based bank integration. Designed on a scalable service-oriented architecture with PostgreSQL, featuring CI/CD automation and modern security practices to support a high concurrent user base."
+  codeUrl="https://github.com/Abhay12911/Paytm-project"
+  liveUrl="#"
+  tags={["Next.js", "PostgreSQL", "Express.js", "Tailwind CSS", "Node.js", "CI/CD"]}
+  featured={true}
+/>
+
           
           <Card
             imageLink={job}
@@ -43,23 +44,24 @@ const ProjectsPage = () => {
             tags={["Next.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "OpenAI API"]}
           />
           
+         <Card
+  imageLink={twitter}
+  projectName="EchoSphere – Social Networking Platform"
+  desc="Developed a modern, full-featured social platform with real-time feeds, personalized post suggestions, and dynamic user interactions. Includes secure authentication, follower/following relationships, media uploads, like/dislike functionality, and interest-based content discovery. Built with advanced React patterns, React Query for state synchronization, and a scalable MERN backend."
+  codeUrl="https://github.com/Abhay12911/Twitter-clone"
+  liveUrl="#"
+  tags={["React.js", "MongoDB", "Express.js", "Node.js", "React Query"]}
+ />
+
           <Card
-            imageLink={twitter}
-            projectName="Twitter Clone - Social Platform"
-            desc="Feature-rich social media platform replicating Twitter's core functionality with real-time updates, user authentication, tweet interactions, and responsive design. Implemented using modern React patterns and state management solutions."
-            codeUrl="https://github.com/Abhay12911/Twitter-clone"
-            liveUrl="#"
-            tags={["React.js", "MongoDB", "Express.js", "Node.js", "React Query"]}
-          />
-          
-          <Card
-            imageLink={travel}
-            projectName="Travel Blog Platform"
-            desc="Dynamic content management system for travel enthusiasts to share their experiences through rich blog posts and stunning imagery. Features user authentication, content creation tools, and modern responsive design."
-            codeUrl="https://github.com/Abhay12911/Blog-Space"
-            liveUrl="#"
-            tags={["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS"]}
-          />
+  imageLink={travel}
+  projectName="Travel Blog Platform"
+  desc="A full-stack travel blogging platform enabling users to share journeys with rich blog posts, image uploads, and interactive features like likes, dislikes, and comments. Built with MERN stack and Tailwind CSS, it provides secure authentication, seamless content management, and a modern responsive UI to enhance user engagement."
+  codeUrl="https://github.com/Abhay12911/Blog-Space"
+  liveUrl="#"
+  tags={["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS"]}
+/>
+
           
           {/* <Card
             imageLink={youtube}
