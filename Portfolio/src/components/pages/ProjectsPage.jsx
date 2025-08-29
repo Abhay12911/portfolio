@@ -6,6 +6,7 @@ import twitter from '../../image/twitter.jpg';
 import job from '../../image/job.jpg';
 import youtube from '../../image/youtube.jpg';
 import payment from '../../image/payment.jpg';
+import draw from '../../image/draw.svg';
 
 const ProjectsPage = () => {
   return (
@@ -24,6 +25,16 @@ const ProjectsPage = () => {
         </div>
 
         <div className="space-y-12">
+
+          <Card
+  imageLink={draw}
+  projectName="Collaborative Drawing App"
+  desc="Architected a scalable, real-time whiteboard platform that enables multiple users to draw simultaneously with custom tools like pencil, shapes, eraser, panning, and zooming — all built from scratch using the Canvas API. Designed with a monorepo architecture separating frontend, backend, and WebSocket services for modularity, and implemented type-safe data synchronization using TypeScript and PostgreSQL."
+  codeUrl="https://github.com/Abhay12911/draw-app"
+  liveUrl="#"
+  tags={["Next.js 15", "TypeScript", "PostgreSQL", "WebSockets", "Canvas API", "Monorepo"]}
+  featured={true}
+/>
           <Card
   imageLink={payment}
   projectName="Full-Stack Payment Application"
