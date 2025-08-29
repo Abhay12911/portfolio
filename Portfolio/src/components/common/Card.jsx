@@ -38,7 +38,7 @@ const Card = ({
               {/* Floating tech stack preview */}
               <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">
                 <div className="flex flex-wrap gap-2 max-w-48">
-                  {tags.slice(0, 3).map((tag, index) => (
+                  {tags.map((tag, index) => (
                     <span 
                       key={index}
                       className="text-xs font-semibold px-3 py-1.5 rounded-full bg-black/60 text-white backdrop-blur-md border border-white/20"
@@ -46,11 +46,11 @@ const Card = ({
                       {tag}
                     </span>
                   ))}
-                  {tags.length > 3 && (
+                  {/* {tags.length > 3 && (
                     <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-black/60 text-white backdrop-blur-md border border-white/20">
                       +{tags.length - 3}
                     </span>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
