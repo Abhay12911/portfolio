@@ -32,7 +32,7 @@ const ProjectsPage = () => {
   desc="Architected a scalable, real-time whiteboard platform that enables multiple users to draw simultaneously with custom tools like pencil, shapes, eraser, panning, and zooming — all built from scratch using the Canvas API. Designed with a monorepo architecture separating frontend, backend, and WebSocket services for modularity, and implemented type-safe data synchronization using TypeScript and PostgreSQL."
   codeUrl="https://github.com/Abhay12911/draw-app"
   liveUrl="#"
-  tags={["Next.js 15", "TypeScript", "PostgreSQL", "WebSockets", "Canvas API", "Monorepo"]}
+  tags={["Next.js", "TypeScript", "PostgreSQL", "WebSockets", "Canvas 2D", "Monorepo","Express"]}
   featured={true}
 />
           <Card
