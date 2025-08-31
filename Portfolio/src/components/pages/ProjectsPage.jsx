@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Card from '../Common/Card';
 import travel from '../../image/travel.jpg';
@@ -27,70 +26,91 @@ const ProjectsPage = () => {
         <div className="space-y-12">
 
           <Card
-  imageLink={draw}
-  projectName="Collaborative Drawing App"
-  desc="Architected a scalable, real-time whiteboard platform that enables multiple users to draw simultaneously with custom tools like pencil, shapes, eraser, panning, and zooming — all built from scratch using the Canvas API. Designed with a monorepo architecture separating frontend, backend, and WebSocket services for modularity, and implemented type-safe data synchronization using TypeScript and PostgreSQL."
-  codeUrl="https://github.com/Abhay12911/draw-app"
-  liveUrl="#"
-  tags={["Next.js", "TypeScript", "PostgreSQL", "WebSockets", "Canvas 2D", "Monorepo","Express"]}
-  featured={true}
-/>
-          <Card
-  imageLink={payment}
-  projectName="Full-Stack Payment Application"
-  desc="Engineered a production-grade payment system with a mock banking server, secure on-ramp transactions, and webhook-based bank integration. Designed on a scalable service-oriented architecture with PostgreSQL, featuring CI/CD automation and modern security practices to support a high concurrent user base."
-  codeUrl="https://github.com/Abhay12911/Paytm-project"
-  liveUrl="#"
-  tags={["Next.js", "PostgreSQL", "Express.js", "Tailwind CSS", "Node.js", "CI/CD"]}
-  featured={true}
-/>
+            imageLink={draw}
+            projectName="Collaborative Drawing App"
+            desc={
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <li>Real-time collaborative whiteboard with multi-user drawing.</li>
+                <li>Custom tools: pencil, shapes, eraser, pan, and zoom.</li>
+                <li>Built from scratch using Canvas API.</li>
+                <li>Monorepo architecture with separated frontend, backend, and WebSocket services.</li>
+                <li>Type-safe synchronization with TypeScript & PostgreSQL.</li>
+              </ul>
+            }
+            codeUrl="https://github.com/Abhay12911/draw-app"
+            liveUrl="#"
+            tags={["Next.js", "TypeScript", "PostgreSQL", "WebSockets", "Canvas 2D", "Monorepo","Express"]}
+            featured={true}
+          />
 
-          
+          <Card
+            imageLink={payment}
+            projectName="Full-Stack Payment Application"
+            desc={
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <li>Production-grade payment system with a mock banking server.</li>
+                <li>On-ramp transactions with secure webhook-based bank integration.</li>
+                <li>Service-oriented architecture with PostgreSQL for scalability.</li>
+                <li>Implemented CI/CD automation pipelines.</li>
+                <li>Focused on modern security & handling high concurrency.</li>
+              </ul>
+            }
+            codeUrl="https://github.com/Abhay12911/Paytm-project"
+            liveUrl="#"
+            tags={["Next.js", "PostgreSQL", "Express.js", "Tailwind CSS", "Node.js", "CI/CD"]}
+            featured={true}
+          />
+
           <Card
             imageLink={job}
             projectName="AI-Powered Job Recommendation System"
-            desc="Intelligent job matching platform that leverages advanced AI algorithms to analyze resume content and provide personalized job recommendations. Features natural language processing, machine learning models, and intuitive user interface for optimal job-seeking experience."
+            desc={
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <li>AI-driven platform for personalized job recommendations.</li>
+                <li>Analyzes resume content using Natural Language Processing.</li>
+                <li>Machine learning models for intelligent job matching.</li>
+                <li>Interactive and intuitive user interface for job seekers.</li>
+              </ul>
+            }
             codeUrl="https://github.com/Abhay12911/ai-job-recommendation"
             liveUrl="#"
             tags={["Next.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "OpenAI API"]}
           />
-          
-         <Card
-  imageLink={twitter}
-  projectName="EchoSphere – Social Networking Platform"
-  desc="Developed a modern, full-featured social platform with real-time feeds, personalized post suggestions, and dynamic user interactions. Includes secure authentication, follower/following relationships, media uploads, like/dislike functionality, and interest-based content discovery. Built with advanced React patterns, React Query for state synchronization, and a scalable MERN backend."
-  codeUrl="https://github.com/Abhay12911/Twitter-clone"
-  liveUrl="#"
-  tags={["React.js", "MongoDB", "Express.js", "Node.js", "React Query"]}
- />
 
           <Card
-  imageLink={travel}
-  projectName="Travel Blog Platform"
-  desc="A full-stack travel blogging platform enabling users to share journeys with rich blog posts, image uploads, and interactive features like likes, dislikes, and comments. Built with MERN stack and Tailwind CSS, it provides secure authentication, seamless content management, and a modern responsive UI to enhance user engagement."
-  codeUrl="https://github.com/Abhay12911/Blog-Space"
-  liveUrl="#"
-  tags={["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS"]}
-/>
-
-          
-          {/* <Card
-            imageLink={youtube}
-            projectName="YouTube Clone Interface"
-            desc="Pixel-perfect recreation of YouTube's interface with video search functionality, detailed video pages, and responsive design. Demonstrates mastery of modern frontend development and API integration."
-            codeUrl="https://github.com/Abhay12911/Youtube-Clone"
+            imageLink={twitter}
+            projectName="EchoSphere – Social Networking Platform"
+            desc={
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <li>Real-time feed with personalized post suggestions.</li>
+                <li>Secure authentication & follower/following relationships.</li>
+                <li>Media uploads, like/dislike system, and content discovery.</li>
+                <li>Built with React Query for efficient state synchronization.</li>
+                <li>Scalable MERN backend for production-grade performance.</li>
+              </ul>
+            }
+            codeUrl="https://github.com/Abhay12911/Twitter-clone"
             liveUrl="#"
-            tags={["React.js", "Tailwind CSS", "YouTube API"]}
+            tags={["React.js", "MongoDB", "Express.js", "Node.js", "React Query"]}
           />
 
           <Card
             imageLink={travel}
-            projectName="Real-Time Weather Application"
-            desc="Clean and intuitive weather application providing accurate real-time weather information with location-based forecasting, interactive UI elements, and responsive design for all devices."
-            codeUrl="https://github.com/Abhay12911/weather-app"
+            projectName="Travel Blog Platform"
+            desc={
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <li>Full-stack blogging platform for sharing travel stories.</li>
+                <li>Rich content support with image uploads & comments.</li>
+                <li>Features like likes, dislikes, and user interaction.</li>
+                <li>Secure authentication and content management system.</li>
+                <li>Responsive modern UI built with Tailwind CSS.</li>
+              </ul>
+            }
+            codeUrl="https://github.com/Abhay12911/Blog-Space"
             liveUrl="#"
-            tags={["HTML5", "CSS3", "JavaScript", "Weather API"]}
-          /> */}
+            tags={["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS"]}
+          />
+
         </div>
       </div>
     </div>
