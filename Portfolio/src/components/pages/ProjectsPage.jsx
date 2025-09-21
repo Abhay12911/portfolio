@@ -96,7 +96,7 @@ const ProjectsPage = () => {
 
           <Card
             imageLink={travel}
-            projectName="Travel Blog Platform"
+            projectName="Trip Tales - Blogging Platform"
             desc={
               <ul className="list-disc list-inside space-y-2 text-gray-300">
                 <li>Full-stack blogging platform for sharing travel stories.</li>
