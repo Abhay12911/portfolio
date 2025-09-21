@@ -107,7 +107,7 @@ const ProjectsPage = () => {
               </ul>
             }
             codeUrl="https://github.com/Abhay12911/Blog-Space"
-            liveUrl="#"
+            liveUrl="https://blog-space-frontend.onrender.com/"
             tags={["React.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS"]}
           />
 
