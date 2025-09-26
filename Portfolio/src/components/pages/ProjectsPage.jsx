@@ -73,7 +73,7 @@ const ProjectsPage = () => {
               </ul>
             }
             codeUrl="https://github.com/Abhay12911/ai-job-recommendation"
-            liveUrl="https://ai-job-recommendation-m4to-qkz9y4yau-abhays-projects-ac03b7c3.vercel.app/"
+            liveUrl="https://ai-job-recommendation-ztr8.vercel.app/"
             tags={["Next.js", "MongoDB", "Express.js", "Node.js", "Tailwind CSS", "OpenAI API"]}
           />
 
