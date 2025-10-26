@@ -38,7 +38,7 @@ const ProjectsPage = () => {
               </ul>
             }
             codeUrl="https://github.com/Abhay12911/draw-app"
-            liveUrl="#"
+            liveUrl="https://collaborative-draw-app-excelidraw-f.vercel.app/"
             tags={["Next.js", "TypeScript", "PostgreSQL", "WebSockets", "Canvas 2D", "Monorepo","Express"]}
             featured={true}
           />
