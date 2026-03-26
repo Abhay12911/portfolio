@@ -11,7 +11,11 @@ const Card = ({
   codeUrl, 
   liveUrl, 
   tags, 
-  featured = false 
+  featured = false,
+  sectionTitle = "Technology Stack",
+  hideActions = false,
+  primaryButtonLabel = "View Code",
+  secondaryButtonLabel = "Live Demo"
 }) => {
   return (
     <div className="group relative">
@@ -72,7 +76,7 @@ const Card = ({
               {/* Technology Stack */}
               <div className="mb-8">
                 <h4 className="text-sm font-semibold text-purple-400 mb-3 uppercase tracking-wider">
-                  Technology Stack
+                  {sectionTitle}
                 </h4>
                 <div className="flex flex-wrap gap-2.5">
                   {tags.map((tag, index) => (
@@ -88,29 +92,31 @@ const Card = ({
             </div>
             
             {/* Action Buttons */}
-            <div className="flex items-center space-x-6">
-              <a 
-                href={codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/btn flex items-center px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-gray-600 hover:border-gray-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                <FaGithub className="h-5 w-5 mr-3 group-hover/btn:rotate-12 transition-transform duration-300" />
-                <span className="font-semibold">View Code</span>
-              </a>
-              
-              {liveUrl && liveUrl !== "#" && (
+            {!hideActions && (
+              <div className="flex items-center space-x-6">
                 <a 
-                  href={liveUrl}
+                  href={codeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/btn flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="group/btn flex items-center px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-gray-600 hover:border-gray-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  <FaExternalLinkAlt className="h-4 w-4 mr-3 group-hover/btn:rotate-12 transition-transform duration-300" />
-                  <span className="font-semibold">Live Demo</span>
+                  <FaGithub className="h-5 w-5 mr-3 group-hover/btn:rotate-12 transition-transform duration-300" />
+                  <span className="font-semibold">{primaryButtonLabel}</span>
                 </a>
-              )}
-            </div>
+
+                {liveUrl && liveUrl !== "#" && (
+                  <a 
+                    href={liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  >
+                    <FaExternalLinkAlt className="h-4 w-4 mr-3 group-hover/btn:rotate-12 transition-transform duration-300" />
+                    <span className="font-semibold">{secondaryButtonLabel}</span>
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

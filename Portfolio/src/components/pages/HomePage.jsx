@@ -6,7 +6,7 @@ import { Github, Linkedin, Code2, Twitter, Mail } from 'lucide-react';
 
 const HomePage = () => {
   const [text] = useTypewriter({
-    words: ['Frontend Developer.', 'Full Stack Developer.', 'Coder.'],
+    words: ['Full-Stack Web Developer.','SaaS & MVP Builder.'],
     loop: {},
     typeSpeed: 70,
     deleteSpeed: 50
@@ -33,17 +33,27 @@ const HomePage = () => {
             <span className="text-purple-400"><Cursor /></span>
           </h2>
 
-          <p className='py-8 text-lg text-gray-300 leading-relaxed max-w-2xl'>
-            I'm a passionate full-stack developer who loves building scalable and user-friendly web applications. 
-            I enjoy learning and adapting to new technologies, constantly expanding my skills to stay current 
-            in the fast-evolving tech landscape. I also strengthen my problem-solving abilities by practicing 
-            data structures and algorithms in C++.
-          </p>
+          <div className='py-8 max-w-2xl'>
+            <ul className='space-y-3 text-lg text-gray-300 leading-relaxed'>
+              <li className='flex items-start gap-3'>
+                <span className='text-sky-400 mt-1 font-semibold'>&gt;</span>
+                <span>I build scalable, high-performance web applications using modern technologies like Next.js, React, and Node.js.</span>
+              </li>
+              <li className='flex items-start gap-3'>
+                <span className='text-sky-400 mt-1 font-semibold'>&gt;</span>
+                <span>I specialize in developing SaaS platforms, MVPs, and real-time applications with secure authentication and optimized backend architectures.</span>
+              </li>
+              <li className='flex items-start gap-3'>
+                <span className='text-sky-400 mt-1 font-semibold'>&gt;</span>
+                <span>With a strong focus on system design and performance, I deliver production-ready solutions that are built to scale.</span>
+              </li>
+            </ul>
+          </div>
 
           <div className="space-y-6 sm:space-y-0 sm:flex sm:items-center sm:gap-6">
-            <Link 
-              to='contact' 
-              smooth 
+            <Link
+              to='contact'
+              smooth
               duration={800}
               className="group flex cursor-pointer items-center gap-2 bg-gradient-to-r from-purple-500 to-sky-500 hover:from-purple-600 hover:to-sky-600 
                 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
@@ -53,8 +63,8 @@ const HomePage = () => {
             </Link>
 
             <div className='flex gap-6 items-center'>
-              <a 
-                href='https://github.com/Abhay12911' 
+              <a
+                href='https://github.com/Abhay12911'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='group relative p-3 bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-purple-400 rounded-full transition-all duration-300'
@@ -64,8 +74,8 @@ const HomePage = () => {
                   GitHub
                 </span>
               </a>
-              <a 
-                href='https://www.linkedin.com/in/abhay-mishra-1976092a3' 
+              <a
+                href='https://www.linkedin.com/in/abhay-mishra-1976092a3'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='group relative p-3 bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-sky-400 rounded-full transition-all duration-300'
@@ -75,8 +85,8 @@ const HomePage = () => {
                   LinkedIn
                 </span>
               </a>
-              <a 
-                href='https://leetcode.com/u/Abhay21234/' 
+              <a
+                href='https://leetcode.com/u/Abhay21234/'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='group relative p-3 bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-orange-400 rounded-full transition-all duration-300'
@@ -86,8 +96,8 @@ const HomePage = () => {
                   LeetCode
                 </span>
               </a>
-              <a 
-                href='https://x.com/abhaystp30' 
+              <a
+                href='https://x.com/abhaystp30'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='group relative p-3 bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-orange-400 rounded-full transition-all duration-300'
@@ -97,8 +107,8 @@ const HomePage = () => {
                   Twitter
                 </span>
               </a>
-              <a 
-                href='mailto:abhaystp30@gmail.com' 
+              <a
+                href='mailto:abhaystp30@gmail.com'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='group relative p-3 bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-orange-400 rounded-full transition-all duration-300'
@@ -112,19 +122,19 @@ const HomePage = () => {
           </div>
         </div>
 
-       <div className="md:w-2/5 mt-12 md:mt-0 flex justify-center">
-  <div className="relative group">
-    {/* Glow ring */}
-    <div className="absolute inset-0 w-72 h-72 rounded-full bg-gradient-to-r from-purple-500 to-sky-500 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+        <div className="md:w-2/5 mt-12 md:mt-0 flex justify-center">
+          <div className="relative group">
+            {/* Glow ring */}
+            <div className="absolute inset-0 w-72 h-72 rounded-full bg-gradient-to-r from-purple-500 to-sky-500 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
 
-    {/* Profile circle with gradient and border */}
-    <div className="relative w-72 h-72 rounded-full bg-gradient-to-br from-gray-900 to-gray-800 p-1 shadow-lg shadow-black/40">
-      <div className="flex items-center justify-center w-full h-full rounded-full bg-gray-900 border border-gray-700">
-        <span className="text-8xl animate-wave origin-[70%_70%]">👋</span>
-      </div>
-    </div>
-  </div>
-</div>
+            {/* Profile circle with gradient and border */}
+            <div className="relative w-72 h-72 rounded-full bg-gradient-to-br from-gray-900 to-gray-800 p-1 shadow-lg shadow-black/40">
+              <div className="flex items-center justify-center w-full h-full rounded-full bg-gray-900 border border-gray-700">
+                <span className="text-8xl animate-wave origin-[70%_70%]">👋</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
