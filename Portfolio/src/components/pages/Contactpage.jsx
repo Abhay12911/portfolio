@@ -54,7 +54,7 @@ const ContactPage = () => {
                 name="name"
                 required
                 className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300"
-                placeholder="John Doe"
+                placeholder="Abhay Mishra"
               />
             </div>
 
@@ -68,7 +68,7 @@ const ContactPage = () => {
                 name="email"
                 required
                 className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300"
-                placeholder="john@example.com"
+                placeholder="abhay@example.com"
               />
             </div>
 

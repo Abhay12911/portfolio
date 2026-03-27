@@ -47,6 +47,7 @@ const ProjectsPage = () => {
             tags={["Next.js 15", "TypeScript", "CMS", "RBAC", "API Design", "Performance Optimization"]}
             sectionTitle="Core Highlights"
             hideActions={true}
+            compactImage={true}
           />
         </div>
 

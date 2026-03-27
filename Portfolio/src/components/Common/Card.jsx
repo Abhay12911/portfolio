@@ -14,6 +14,7 @@ const Card = ({
   featured = false,
   sectionTitle = "Technology Stack",
   hideActions = false,
+  compactImage = false,
   primaryButtonLabel = "View Code",
   secondaryButtonLabel = "Live Demo"
 }) => {
@@ -31,11 +32,11 @@ const Card = ({
         <div className="flex flex-col lg:flex-row h-full">
           {/* Image Section */}
           <div className="lg:w-2/5 relative overflow-hidden">
-            <div className="aspect-video lg:aspect-auto lg:h-full relative">
+            <div className={`aspect-video relative ${compactImage ? 'lg:aspect-auto lg:h-full' : 'lg:aspect-auto lg:h-full'}`}>
               <img 
                 src={imageLink} 
                 alt={projectName}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className={`w-full h-full transition-transform duration-700 ${compactImage ? 'object-contain p-8 group-hover:scale-105' : 'object-cover group-hover:scale-110'}`}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20 group-hover:opacity-80 transition-opacity duration-300"></div>
               
